@@ -191,16 +191,16 @@ f63087c HEAD@{1}: commit: Remove file1
 我在开头的`Git之禅`已经介绍过分支了，如果还是不清楚，可以参考这篇文章：
 [分支管理](https://www.liaoxuefeng.com/wiki/896043488029600/896954848507552)
 这篇文章讲的很好，我就不献丑了。
-####  2.4. <a name='GitHubGit'></a>GitHub与Git
+###  2.4. <a name='GitHubGit'></a>GitHub与Git
 这节介绍如何联动GitHub
-##### Clone命令
+#### Clone命令
 Clone命令是指把远程的放在GitHub上的Repository下载到本地。指令很简单，
 ```shell
 git clone 地址
 ```
 配合代理食用更佳。
 
-##### 提交代码到GitHub
+#### 提交代码到GitHub (Push)
 现在我们把GitLearning上传到GitHub上。
 ```shell
 # 将当前分支重命名为main
@@ -216,3 +216,9 @@ git push -u origin main
 git push origin main
 ```
 即可。
+
+#### 拉取远程代码，更新本地仓库 (Pull)
+如果GitHub上已经是最新的代码，但本地仓库还是旧版本，那么可以用以下命令同步：
+```
+git pull origin
+```
